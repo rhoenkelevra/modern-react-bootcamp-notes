@@ -1,10 +1,18 @@
 import React, { Component } from "react";
 
-class Props extends Component {
+class Message extends Component {
+  // Default props
+  static defaultProps = {
+    from: "Default Anonymous",
+    bangs: 1
+  }
+
   render() {
     console.log(this.props);
     let bangs = "!".repeat(this.props.bangs);
     const { to, from } = this.props; // Destructuring props, so in the markup we can use the variables name
+
+    
     return (
       <div>
         <h2>
@@ -16,7 +24,7 @@ class Props extends Component {
   }
 }
 
-export default Props;
+export default Message;
 
 // Props is properties passed from the parent component, in this case App.js
 // to the child, Props
