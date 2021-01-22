@@ -10,6 +10,7 @@ class Message extends Component {
   render() {
     console.log(this.props);
     let bangs = "!".repeat(this.props.bangs);
+    // eslint-disable-next-line
     const { to, from } = this.props; // Destructuring props, so in the markup we can use the variables name
 
     
